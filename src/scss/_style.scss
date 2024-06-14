@@ -1,0 +1,338 @@
+// mixins
+
+@mixin sameStyle {
+    margin-top: 100px;
+    text-align: center;
+
+    h3 {
+        margin-top: 30px;
+        margin-bottom: 14px;
+        font-size: 30px;
+        color: #5d6981;
+        font-weight: 700;
+    }
+
+    p {
+        // width: 90%;
+        font-size: 18px;
+        line-height: 30px;
+        color: #7c8ca0;
+        font-weight: 300;
+    }
+}
+
+// common css start
+body {
+    font-size: 18px;
+    font-family: $roboto;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title2 {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.cusBtn {
+    border-radius: 30px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 22px 70px;
+    transition: .4s;
+
+}
+
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #000000e6;
+    border: 1px solid #9fabba;
+}
+
+// common css end
+
+// header start
+header {
+    padding: 25px 0;
+    border-bottom: 1px solid #e4e6ea;
+    background-color: #fff;
+
+    nav {
+        ul {
+            li {
+                margin-left: 25px;
+
+                a {
+                    padding: 10px 16px !important;
+                    border-radius: 22px;
+                    border: 1px solid transparent;
+                    font-size: 20px;
+
+                    &:hover {
+                        border: 1px solid #9fabba;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// header end
+
+// <!-- banner start -->
+.banner {
+    padding-top: 120px;
+    padding-bottom: 30px;
+    background-image: linear-gradient(0deg, #edeff1 1%, #ffffff 24%, #e1e3e8 31%, #ffffff 100%);
+    text-align: center;
+
+    h1 {
+        color: #0149a1;
+    }
+
+    h2 {
+        color: #5d6981;
+        margin-bottom: 108px;
+    }
+
+    button {
+        background-color: #ff2d55;
+        margin-bottom: 115px;
+
+
+        &:hover {
+            background-color: #0149a1;
+        }
+    }
+
+
+
+    // <!-- services start -->
+    .services {
+        .service-content {
+            @include sameStyle;
+        }
+    }
+
+    // <!-- services end -->
+}
+
+// <!-- banner end -->
+
+
+// <!-- creativity start -->
+.creativity {
+    padding: 173px 0;
+    background: url(../images/creativity.jpg);
+    // background-size: contain; 
+    background-repeat: no-repeat;
+    text-align: center;
+
+    button {
+        background-color: #0149a1;
+
+        &:hover {
+            background-color: #ff2d55;
+        }
+    }
+}
+
+// <!-- creativity end -->
+
+// <!-- work start -->
+.work {
+    padding: 128px 0;
+    background-color: #0149a1;
+
+    .work-head {
+        text-align: center;
+
+        h1 {
+            color: #fff;
+        }
+
+        h2 {
+            color: #5483bb;
+        }
+    }
+
+    .work-content {
+        img {
+            margin-top: 115px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 30px;
+            color: #ffffff;
+            font-weight: 300;
+            margin-bottom: 20px;
+
+            &:first-of-type {
+                margin-top: 115px;
+            }
+        }
+    }
+
+    .work-button {
+        text-align: center;
+        margin-top: 45px;
+
+
+        button {
+            color: #0149a1;
+            background-color: #fff;
+
+            &:hover {
+                color: #fff;
+                background-color: #ff2d55;
+            }
+        }
+    }
+}
+
+// <!-- work end -->
+
+// <!-- quote start -->
+.quote {
+    padding: 75px 0;
+
+    ol {
+        bottom: -50px;
+
+        li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #7c8ca0;
+        }
+    }
+
+    .carousel-content {
+        text-align: center;
+        font-weight: 300;
+        color: #7c8ca0;
+        line-height: 30px;
+
+        p {
+            margin-top: 48px;
+            margin-bottom: 35px;
+            font-size: 24px;
+            font-style: italic;
+
+        }
+
+        span {
+            font-size: 18px;
+            margin-bottom: 20px;
+
+            a {
+                text-decoration: underline;
+                color: #7c8ca0;
+            }
+        }
+    }
+}
+
+// <!-- quote end -->
+
+// <!-- team start -->
+.team {
+    text-align: center;
+    padding: 125px 0;
+    background-color: #EDEFF1;
+
+    .team-header {
+        h1 {
+            color: #0149a1;
+        }
+
+        h2 {
+            color: #7c8ca0;
+        }
+    }
+
+    .team-content {
+        @include sameStyle;
+    }
+
+    .team-button {
+        margin-top: 85px;
+
+        button {
+            background-color: #ff2d55;
+
+            &:hover {
+                background-color: #0149a1;
+            }
+        }
+    }
+}
+
+// <!-- team end -->
+
+
+// <!-- map start -->
+// .map {}
+
+// <!-- map end -->
+
+// <!-- list start -->
+
+.list {
+    background-color: #0149a1;
+    padding: 75px 0;
+
+    ul {
+        li {
+            font-size: 18px;
+            line-height: 36px;
+            color: #ffffff;
+            transition: .3s;
+
+            &:hover {
+                color: #ff2d55;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// <!-- list end -->
+
+
+// footer start
+footer {
+    background-color: #0149a1;
+    padding-top: 45px;
+    padding-bottom: 125px;
+    text-align: center;
+
+    p {
+        font-size: 18px;
+        line-height: 24px;
+        color: #f8f8f8;
+        text-align: center;
+
+        &:first-of-type {
+            margin-bottom: 5px;
+        }
+
+        a {
+            font-weight: bold;
+            color: #ffffff;
+
+            &:hover {
+                color: #ff2d55;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// footer end
